@@ -1,0 +1,39 @@
+:root {
+	--strong-cyan: hsl(172, 67%, 45%);
+	--very-dark-cyan: hsl(183, 100%, 15%);
+	--darker-grayish-cyan: hsl(186, 14%, 43%);
+	--dark-grayish-cyan: hsl(184, 14%, 56%);
+	--light-grayish-cyan: hsl(185, 41%, 84%);
+	--lighter-grayish-cyan: hsl(189, 41%, 97%);
+	--background: hsl(187, 43%, 84%);
+	--white: hsl(0, 0%, 100%);
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+	color: var(--very-dark-cyan);
+	font-weight: bold;
+}
+
+body {
+	background-color: var(--background);
+	height: 100%;
+	margin: 0;
+	font-family: 'Qahiri', sans-serif;
+	font-family: 'Space Mono', monospace;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.wrapper {
+	background-color: var(--lighter-grayish-cyan);
+	height: 100%;
+	border-radius: 2rem 2rem 0 0;
+	padding: 3rem 2rem;
+}
