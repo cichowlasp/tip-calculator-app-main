@@ -138,6 +138,7 @@ input::-webkit-inner-spin-button {
 	width: 100%;
 	border-radius: 1.2rem;
 	padding: 2rem 2rem 1.5rem 2rem;
+	margin-bottom: 0;
 }
 
 .sum-wrapper {
@@ -171,6 +172,11 @@ button {
 	font-weight: bold;
 	font-family: 'Space Mono', monospace;
 	text-transform: uppercase;
+	color: var(--very-dark-cyan);
+}
+
+.active {
+	background-color: var(--strong-cyan);
 	color: var(--very-dark-cyan);
 }
 
