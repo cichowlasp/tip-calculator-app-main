@@ -76,7 +76,7 @@ input {
 	border-radius: 6px;
 	text-align: right;
 	border: 0.2rem solid var(--lighter-grayish-cyan);
-	box-shadow: none;
+	appearance: none;
 }
 
 input::placeholder {
