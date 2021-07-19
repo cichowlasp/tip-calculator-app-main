@@ -16,8 +16,8 @@
 			href="https://fonts.googleapis.com/css2?family=Qahiri&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 			rel="stylesheet"
 		/>
-    <link rel="stylesheet" href="styles.css"/>
-    
+		<link rel="stylesheet" href="styles.css" />
+
 		<title>Frontend Mentor | Tip calculator app</title>
 	</head>
 	<body>
@@ -25,65 +25,87 @@
 			<img src="./images/logo.svg" alt="splitter logo" />
 		</header>
 		<div class="wrapper">
-			<section>
-				<div class="input-messages">
-					<p>Bill</p>
-					<p bill-error class="error"></p>
-				</div>
-				<div class="input-wrapper">
-					<input bill placeholder="0" type="number" pattern="\d*" min="0"/>
-					<img
-						class="input-img"
-						src="./images/icon-dollar.svg"
-						alt="dollar icon on input"
-					/>
-				</div>
-			</section>
-			<section>
-				<p>Select Tip %</p>
-				<div class="tip-container">
-					<div class="option">5%</div>
-					<div class="option">10%</div>
-					<div class="option">15%</div>
-					<div class="option">25%</div>
-					<div class="option">50%</div>
-					<div class="input-wrapper">
-						<input placeholder="Custom" type="number" pattern="\d*" />
+			<div class="half">
+				<section>
+					<div class="input-messages">
+						<p>Bill</p>
+						<p bill-error class="error"></p>
 					</div>
-				</div>
-			</section>
-			<section>
-				<div class="input-messages">
-					<p>Number of People</p>
-					<p people-error class="error"></p>
-				</div>
-				
-        <div class="input-wrapper">
-					<input people placeholder="0" type="number" pattern="\d*"/>
-					<img
-						class="input-img"
-						src="./images/icon-person.svg"
-						alt="dollar icon on input"
-					/>
-			</section>
-      <section class='green'>
-        <div class="sum-wrapper">
-          <div>
-            <div class="title">Tip Amount </div>
-            <div class="subtitle">/ person</div>
-          </div>
-          <div tip class="price">$0.00</div>
-        </div>
-        <div class="sum-wrapper">
-          <div>
-            <div class="title">Total</div>
-            <div class="subtitle">/ person</div>
-          </div>
-          <div total class="price">$0.00</div>
-        </div>
-        <button reset>Reset</button>
-      </section>
+					<div class="input-wrapper">
+						<input
+							bill
+							placeholder="0"
+							type="number"
+							pattern="\d*"
+							min="0"
+						/>
+						<img
+							class="input-img"
+							src="./images/icon-dollar.svg"
+							alt="dollar icon on input"
+						/>
+					</div>
+				</section>
+				<section>
+					<p>Select Tip %</p>
+					<div class="tip-container">
+						<div class="option">5%</div>
+						<div class="option">10%</div>
+						<div class="option">15%</div>
+						<div class="option">25%</div>
+						<div class="option">50%</div>
+						<div class="input-wrapper">
+							<input
+								placeholder="Custom"
+								type="number"
+								pattern="\d*"
+							/>
+						</div>
+					</div>
+				</section>
+				<section class="last">
+					<div class="input-messages">
+						<p>Number of People</p>
+						<p people-error class="error"></p>
+					</div>
+
+					<div class="input-wrapper">
+						<input
+							people
+							placeholder="0"
+							type="number"
+							pattern="\d*"
+						/>
+						<img
+							class="input-img"
+							src="./images/icon-person.svg"
+							alt="dollar icon on input"
+						/>
+					</div>
+				</section>
+			</div>
+			<div class="half">
+				<section class="green">
+					<div>
+						<div class="sum-wrapper">
+							<div>
+								<div class="title">Tip Amount</div>
+								<div class="subtitle">/ person</div>
+							</div>
+							<div tip class="price">$0.00</div>
+						</div>
+						<div class="sum-wrapper">
+							<div>
+								<div class="title">Total</div>
+								<div class="subtitle">/ person</div>
+							</div>
+							<div total class="price">$0.00</div>
+						</div>
+					</div>
+					<button reset>Reset</button>
+				</section>
+			</div>
 		</div>
-    <script src="script.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
