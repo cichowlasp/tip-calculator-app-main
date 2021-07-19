@@ -20,7 +20,7 @@ p {
 	--background: hsl(187, 43%, 84%);
 	--hover: #9fe8df;
 	--white: hsl(0, 0%, 100%);
-	--logo-height: 10rem;
+	--logo-height: 10em;
 	--error: #e19780;
 }
 
@@ -205,8 +205,10 @@ button:hover {
 	background-color: var(--hover);
 }
 
-@media (min-width: 60rem) {
-	body {
+@media (min-width: 75rem) {
+	.body {
+		height: 100%;
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -217,7 +219,7 @@ button:hover {
 		grid-template-columns: 1fr 1fr;
 		column-gap: 2rem;
 		border-radius: 2rem;
-		margin: 0 20%;
+		width: 60vw;
 	}
 
 	.wrapper .green {
@@ -228,5 +230,9 @@ button:hover {
 	}
 	.last {
 		margin-bottom: 0;
+	}
+	.logo {
+		height: 0;
+		padding-bottom: 5em;
 	}
 }
