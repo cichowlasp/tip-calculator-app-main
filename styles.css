@@ -76,6 +76,7 @@ input {
 	border-radius: 6px;
 	text-align: right;
 	border: 0.2rem solid var(--lighter-grayish-cyan);
+	box-shadow: none;
 }
 
 input::placeholder {
@@ -84,7 +85,6 @@ input::placeholder {
 
 .input-wrapper {
 	width: 100%;
-
 	position: relative;
 }
 .input-img {
