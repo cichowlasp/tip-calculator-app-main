@@ -76,6 +76,8 @@ input {
 	border-radius: 6px;
 	text-align: right;
 	border: 0.2rem solid var(--lighter-grayish-cyan);
+	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 }
 

@@ -6,19 +6,24 @@ let tipAmount = document.querySelector('div[tip]');
 let selectedTip;
 
 billInput.addEventListener('input', () => {
-	total.textContent = `$${parseFloat(billInput.value).toFixed(2)}`;
+	calculateTotal();
 	if (billInput.value === '') total.textContent = `$0.00`;
 });
 
+const removeActiveClass = () => {
+	tipContainer.forEach((element) => {
+		if (element.classList.contains('active')) {
+			element.classList.remove('active');
+		}
+	});
+};
+
 tipContainer.forEach((element) => {
 	element.addEventListener('click', () => {
-		tipContainer.forEach((element) => {
-			if (element.classList.contains('active')) {
-				element.classList.remove('active');
-			}
-		});
+		removeActiveClass();
 		element.classList.add('active');
 		selectedTip = element;
+		calculateTotal();
 		calculateTip();
 	});
 });
@@ -31,16 +36,27 @@ const percentsValues = {
 	'50%': 0.5,
 };
 
+const calculateTotal = () => {
+	const percent = percentsValues[selectedTip.textContent];
+	const price = parseInt(billInput.value);
+	const peopleNumber = parseInt(peopleInput.value);
+	total.textContent = `$${((price * percent + price) / peopleNumber).toFixed(
+		2
+	)}`;
+	if (selectedTip.textContent === '' || peopleInput.value === '')
+		total.textContent = `$${(price * percent + price).toFixed(2)}`;
+};
+
 const calculateTip = () => {
 	const percent = percentsValues[selectedTip.textContent];
 	const price = parseInt(billInput.value);
 	const peopleNumber = parseInt(peopleInput.value);
 	tipAmount.textContent = `$${((percent * price) / peopleNumber).toFixed(2)}`;
-	console.log(peopleInput.value);
 	if (selectedTip.textContent === '' || peopleInput.value === '')
 		tipAmount.textContent = `$${(percent * billInput.value).toFixed(2)}`;
 };
 
 peopleInput.addEventListener('input', () => {
 	calculateTip();
+	calculateTotal();
 });
