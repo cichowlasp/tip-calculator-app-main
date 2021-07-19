@@ -38,7 +38,7 @@ const calculateTip = () => {
 	tipAmount.textContent = `$${((percent * price) / peopleNumber).toFixed(2)}`;
 	console.log(peopleInput.value);
 	if (selectedTip.textContent === '' || peopleInput.value === '')
-		tipAmount.textContent = (percent * billInput.value).toFixed(2);
+		tipAmount.textContent = `$${(percent * billInput.value).toFixed(2)}`;
 };
 
 peopleInput.addEventListener('input', () => {
