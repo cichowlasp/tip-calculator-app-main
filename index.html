@@ -26,9 +26,12 @@
 		</header>
 		<div class="wrapper">
 			<section>
-				<p>Bill</p>
+				<div class="input-messages">
+					<p>Bill</p>
+					<p bill-error class="error"></p>
+				</div>
 				<div class="input-wrapper">
-					<input bill placeholder="0" type="number" min="0"/>
+					<input bill placeholder="0" type="number" pattern="\d*" min="0"/>
 					<img
 						class="input-img"
 						src="./images/icon-dollar.svg"
@@ -45,14 +48,18 @@
 					<div class="option">25%</div>
 					<div class="option">50%</div>
 					<div class="input-wrapper">
-						<input placeholder="Custom" type="number" />
+						<input placeholder="Custom" type="number" pattern="\d*" />
 					</div>
 				</div>
 			</section>
 			<section>
-				<p>Number of People</p>
-        <div  class="input-wrapper">
-					<input people placeholder="0" type="number" />
+				<div class="input-messages">
+					<p>Number of People</p>
+					<p people-error class="error"></p>
+				</div>
+				
+        <div class="input-wrapper">
+					<input people placeholder="0" type="number" pattern="\d*"/>
 					<img
 						class="input-img"
 						src="./images/icon-person.svg"
@@ -74,7 +81,7 @@
           </div>
           <div total class="price">$0.00</div>
         </div>
-        <button>Reset</button>
+        <button reset>Reset</button>
       </section>
 		</div>
     <script src="script.js"></script>

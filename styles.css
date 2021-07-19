@@ -21,6 +21,7 @@ p {
 	--hover: #9fe8df;
 	--white: hsl(0, 0%, 100%);
 	--logo-height: 10rem;
+	--error: #e19780;
 }
 
 html {
@@ -94,6 +95,23 @@ input::placeholder {
 	top: 50%;
 	left: 1.2rem;
 	transform: translateY(-50%);
+}
+
+.input-messages {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.input-messages .error {
+	color: var(--error);
+}
+
+.error {
+	border-color: var(--error);
+}
+.error:focus {
+	border-color: var(--error);
 }
 
 input:focus {
